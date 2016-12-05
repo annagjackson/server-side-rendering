@@ -1,20 +1,19 @@
+var data = require('./github')
+
 module.exports = {
-  getHomeData: getHomeData
+  // getHomeData: getHomeData,
+  getRepos:getRepos
 }
 
-function getHomeData () {
+function getRepos () {
+  var filteredRepos = data.repos.map(function (repo) {
+    return {
+      id: repo.id,
+      name: repo.name
+    }
+  })
   return {
-    title: 'Awesome title',
-    headerText: 'Welcome to Awesome',
-    fruitList: [{
-      name: 'apples',
-      colour: 'red'
-    }, {
-      name: 'oranges',
-      colour: 'orange'
-    }, {
-      name: 'bananas',
-      colour: 'yellow'
-    }]
+    prop: data.prop,
+    repos: filteredRepos
   }
 }

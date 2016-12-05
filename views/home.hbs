@@ -3,11 +3,13 @@
 {{#if showList}}
   Fruit!
   <ul>
-    {{#each fruitList}}
-      {{> fruit}}
+    {{#each repos}}
+      <p>{{id}}</p>
+      <p>{{name}}</p>
     {{/each}}
   </ul>
-  Ok, now you can <a href="/">hide the list</a>.
+  <h1>{{prop}}</h1>
+  Ok, <em>now</em> you can <a href="/">hide the list</a>.
 {{else}}
   <a href="/?showlist=true">Show me the list</a>, please.
 {{/if}}
