@@ -1,15 +1,18 @@
-{{> header}}
 
-{{#if showList}}
-  Fruit!
-  <ul>
-    {{#each repos}}
-      <p>{{id}}</p>
-      <p>{{name}}</p>
-    {{/each}}
-  </ul>
-  <h1>{{prop}}</h1>
-  Ok, <em>now</em> you can <a href="/">hide the list</a>.
-{{else}}
-  <a href="/?showlist=true">Show me the list</a>, please.
-{{/if}}
+
+  <div class  = "home">
+
+    {{#if showList}}
+      <h1>Repo List</h1>
+      <ul>
+        {{#each repos}}
+          <p><a href = '/profile/{{id}}'>{{name}}</a></p>
+
+        {{/each}}
+      </ul>
+      <h1>{{prop}}</h1>
+      Ok, <em>now</em> you can <a href="/">hide the list</a>.
+    {{else}}
+      <a href="/?showlist=true">Show me the list</a>, please.
+    {{/if}}
+  </div>

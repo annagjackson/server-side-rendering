@@ -1,6 +1,5 @@
-module.exports = {
-  prop: 'A String',
-  repos: [
+{
+  "repos": [
   {
     "id": 75151382,
     "name": "bowling-kata",

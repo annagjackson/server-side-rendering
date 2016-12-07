@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    {{#each repos}}
-      <a>{{id}}</a>
-    {{/each}}
-  </body>
-</html>
+
+<div class = "detail">
+  <h1>{{name}}</h1>
+  <h2>{{owner.login}}</h2>
+  <h2><a href = "{{owner.html_url}}">go to github repos</a></h2>
+</div>
